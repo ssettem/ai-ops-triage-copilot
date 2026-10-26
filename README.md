@@ -2,7 +2,7 @@
 
 An n8n workflow that triages property-maintenance service tickets with Claude, then does what a careful operations analyst would: keeps a person in the loop where the AI is unsure, tracks SLAs, catches repeat complaints, and **measures whether the AI can be trusted, and what it costs**, before anyone relies on it.
 
-> Built from my experience administering Jira and taking 30–70 service tickets a day to closure at a facility management company, and supporting sales, product and risk teams at an edtech company. The tickets here are realistic but made up; no client data is used.
+> Built from my experience administering Jira and taking 100+ service tickets a week to closure at a facility management company, and supporting sales, product and risk teams at an edtech company. The tickets here are realistic but made up; no client data is used.
 
 ## The business problem
 
