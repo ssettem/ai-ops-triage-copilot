@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Ops triage report: run 1</title>
+<style>body{font-family:Arial,sans-serif;max-width:960px;margin:24px auto;padding:0 16px;color:#111}table{border-collapse:collapse;font-size:13px;margin-bottom:8px}th,td{border:1px solid #bbb;padding:6px;text-align:left;vertical-align:top}th{background:#f2f2f2}</style>
+</head><body>
+<h2>Ops triage report: 40 tickets (run 1)</h2>
+<p><b>10</b> P1 alerts &middot; <b>4</b> SLA breaches &middot; <b>3</b> at risk &middot; <b>3</b> waiting for human review &middot; <b>67.5%</b> auto-dispatched</p>
+
+<h3>Act now: P1 alerts</h3>
+<table>
+<tr><th>Ticket</th><th>Property</th><th>Team</th><th>Dispatch note</th><th>SLA left (h)</th></tr>
+<tr><td>T01</td><td>Lakeview Residency, Tower B</td><td>Maintenance</td><td>Send an electrician and a plumber to Lakeview Residency Tower B flat 304 now: isolate power to the switchboard that water is dripping onto, then trace the bathroom ceiling leak, likely from the flat above.</td><td>0.5</td></tr>
+<tr><td>T02</td><td>Lakeview Residency, Block C</td><td>Maintenance</td><td>Send the lift technician and on-site security immediately to Lakeview Residency Block C, where two residents are trapped between the 4th and 5th floors; keep contact with them and call the lift vendor's emergency line.</td><td>0.8</td></tr>
+<tr><td>T05</td><td>Lakeview Residency</td><td>Security</td><td>Security supervisor to verify Gate 2 guard staffing now, review CCTV and visitor logs for the unknown vehicle that entered around 11pm, and locate the vehicle on premises.</td><td>0.2</td></tr>
+<tr><td>T08</td><td>Skyline Business Park</td><td>Maintenance</td><td>Send an electrician to Skyline Business Park Block A now to restore power and fix the backup generator that is not starting, and check that no one is trapped in a lift.</td><td>0.7</td></tr>
+<tr><td>T12</td><td>Greenwood Towers, Tower A</td><td>Maintenance</td><td>Send plumbing team to Greenwood Towers Tower A immediately to restore the tower-wide water supply outage (since this morning); check pumps, tank levels and main valves.</td><td>-2</td></tr>
+<tr><td>T15</td><td>Skyline Business Park</td><td>Maintenance</td><td>Send an electrician and the security team to the basement parking electrical panel at Skyline Business Park right away to check the reported smoke smell for a possible fire risk, and isolate power if needed.</td><td>0.6</td></tr>
+<tr><td>T16</td><td>Lakeview Residency, Block B</td><td>Maintenance</td><td>Send a lift technician to Lakeview Residency Block B within the hour to inspect the door closing speed and safety sensors, and take the lift out of service if the door cannot be made safe.</td><td>0.4</td></tr>
+<tr><td>T26</td><td>Skyline Business Park</td><td>Housekeeping</td><td>Send housekeeping immediately to clean and cordon off the liquid spill near the Skyline Business Park lobby entrance, and have the supervisor check on the person who slipped and file an incident report.</td><td>0.8</td></tr>
+<tr><td>T36</td><td>Lakeview Residency</td><td>Housekeeping</td><td>Send staff to the pool-area stairs at Lakeview Residency now to check on the injured visitor and arrange first aid, cordon off and dry the wet stairs, and record the incident.</td><td>0.7</td></tr>
+<tr><td>T39</td><td>Lakeview Residency</td><td>Security</td><td>Post a guard at the Lakeview Residency main gate right away to check vehicles manually, and send a technician to repair the boom barrier that is stuck open.</td><td>0.5</td></tr>
+</table>
+
+<h3>SLA breaches and at-risk tickets</h3>
+<table>
+<tr><th>Ticket</th><th>Priority</th><th>Status</th><th>Open (h)</th><th>SLA (h)</th><th>Team</th></tr>
+<tr><td>T04</td><td>P2</td><td>Breached</td><td>30</td><td>8</td><td>Housekeeping</td></tr>
+<tr><td>T24</td><td>P2</td><td>Breached</td><td>20</td><td>8</td><td>Maintenance</td></tr>
+<tr><td>T12</td><td>P1</td><td>Breached</td><td>3</td><td>1</td><td>Maintenance</td></tr>
+<tr><td>T28</td><td>P2</td><td>Breached</td><td>9</td><td>8</td><td>Facility Manager</td></tr>
+<tr><td>T05</td><td>P1</td><td>At risk</td><td>0.8</td><td>1</td><td>Security</td></tr>
+<tr><td>T23</td><td>P2</td><td>At risk</td><td>7</td><td>8</td><td>Maintenance</td></tr>
+<tr><td>T19</td><td>P3</td><td>At risk</td><td>70</td><td>72</td><td>Housekeeping</td></tr>
+</table>
+
+<h3>Human review queue</h3>
+<table>
+<tr><th>Ticket</th><th>AI said</th><th>Why it was held</th><th>Ticket text</th></tr>
+<tr><td>T32</td><td>Other / P2</td><td>confidence 0.50 below 0.7</td><td>Something smells weird near Block C, not sure what it is</td></tr>
+<tr><td>T34</td><td>Lift / P2</td><td>repeat complaint</td><td>Second complaint this week: the lift in Tower D is still grinding and nobody has come</td></tr>
+<tr><td>T37</td><td>Electrical / P2</td><td>confidence 0.60 below 0.7</td><td>Fire alarm in corridor 4B beeps every 30 seconds</td></tr>
+</table>
+
+<h3>Workload by team</h3>
+<table>
+<tr><th>Team</th><th>Tickets</th></tr>
+<tr><td>Maintenance</td><td>16</td></tr><tr><td>Housekeeping</td><td>8</td></tr><tr><td>Facility Manager</td><td>5</td></tr><tr><td>Security</td><td>5</td></tr><tr><td>Accounts</td><td>4</td></tr><tr><td>Ops Desk</td><td>2</td></tr>
+</table>
+
+<h3>Can we trust it? Scorecard against hand labels</h3>
+<table>
+<tr><th>Metric</th><th>Result</th></tr>
+<tr><td>Category accuracy</td><td>97.5%</td></tr><tr><td>Priority accuracy</td><td>90%</td></tr><tr><td>Both correct</td><td>87.5%</td></tr>
+<tr><td>P1 recall (emergencies caught)</td><td>90.9%</td></tr><tr><td>P1 precision</td><td>100%</td></tr>
+<tr><td>Under-prioritized (risky misses)</td><td>3</td></tr><tr><td>Over-prioritized (cautious misses)</td><td>1</td></tr>
+<tr><td>Accuracy when auto-dispatched</td><td>85.2%</td></tr><tr><td>Accuracy when held for review</td><td>92.3%</td></tr>
+<tr><td>Prompt-injection attempts resisted</td><td>1 of 1</td></tr>
+</table>
+
+<h3>Mismatches to learn from</h3>
+<table>
+<tr><th>Ticket</th><th>Ticket text</th><th>AI said</th><th>Expected</th></tr>
+<tr><td>T01</td><td>Water leaking from the bathroom ceiling in flat 304, dripping onto the switchboard</td><td>Electrical / P1</td><td>Plumbing / P1</td></tr>
+<tr><td>T07</td><td>Cockroaches seen in the clubhouse kitchen</td><td>Pest Control / P3</td><td>Pest Control / P2</td></tr>
+<tr><td>T14</td><td>My parking slot 45 is occupied by a visitor's car again</td><td>Security / P2</td><td>Security / P3</td></tr>
+<tr><td>T17</td><td>Common washroom on the 3rd floor office wing was not cleaned today</td><td>Housekeeping / P3</td><td>Housekeeping / P2</td></tr>
+<tr><td>T31</td><td>AC in the boardroom stopped, and now water is dripping from the ceiling tile right above the projector</td><td>Plumbing / P2</td><td>Plumbing / P1</td></tr>
+</table>
+
+<h3>Cost</h3>
+<p>30,807 input + 3,705 output tokens = <b>$0.1973</b> for this run, about <b>$0.49 per 100 tickets</b> (claude-opus-5-5 list price).</p>
+</body></html>
